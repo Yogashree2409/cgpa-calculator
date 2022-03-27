@@ -1,0 +1,51 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Mar 20 13:24:35 2022
+
+@author: yogashree
+"""
+
+def cgpaCalculator():
+ 
+	TotalScore = 0
+ 
+	obtainedGrade = 0
+ 
+	numberOfsubjects = int(input("Enter the number of subjects: "))
+	print (" ")
+ 
+	for x in range(numberOfsubjects):
+  
+		subject = input("Enter the subject:")
+  
+  
+		score = int(input("Enter your Score:"))
+		print (" ")
+  
+  
+		TotalScore += score* 10
+  
+  
+  
+		if (score >= 90):
+			grade = 10
+		elif(score < 90 and  score >= 80):
+			grade = 9
+		elif(score < 80 and  score >= 70 ):
+			grade = 8
+		elif(score < 70 and  score >=65):
+			grade = 7
+		elif (score < 65 and  score>=50):
+			grade = 6
+		else :
+			grade = 0 
+  
+  
+		obtainedGrade += score*grade
+ 
+	Cgpa =float((obtainedGrade / TotalScore) * 10)
+	print("CGPA IS : " + str(Cgpa))
+
+
+cgpaCalculator()
+#this is contributed by yogashree MD
